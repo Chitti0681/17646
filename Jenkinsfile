@@ -4,7 +4,7 @@ pipeline {
     stage('Build Jar') {
       agent any
       steps {
-        sh '''./mvnw package
+        sh '''mvn package
 java -jar target/*.jar'''
       }
     }
