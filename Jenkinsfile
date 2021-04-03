@@ -15,7 +15,8 @@ mvn package '''
     stage('Execute Jar') {
       steps {
         unstash 'Target'
-        sh 'java -jar target/*.jar'
+        sh '''ls
+java -jar target/*.jar'''
       }
     }
 
