@@ -8,7 +8,7 @@ pipeline {
 mvn -version
 chmod u+x mvnw
 mvn package '''
-        stash '.jar'
+        stash(name: 'save Target', includes: 'target/*.jar')
       }
     }
 
