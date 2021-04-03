@@ -8,6 +8,7 @@ pipeline {
 mvn -version
 chmod u+x mvnw
 mvn package '''
+        stash '.jar'
       }
     }
 
