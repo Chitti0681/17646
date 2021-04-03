@@ -6,8 +6,8 @@ pipeline {
       steps {
         sh '''cd spring-petclinic-main
 mvn -version
-#chmod u+x mvnw
-#./mvnw package '''
+chmod u+x mvnw
+./mvnw package '''
       }
     }
 
