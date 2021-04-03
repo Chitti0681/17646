@@ -15,7 +15,8 @@ mvn package '''
     stage('Execute Jar') {
       steps {
         unstash 'Target'
-        sh '''ls
+        sh '''cd spring-petclinic-main
+ls
 java -jar target/*.jar'''
       }
     }
