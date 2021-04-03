@@ -5,7 +5,7 @@ pipeline {
       agent any
       steps {
         sh '''cd spring-petclinic-main
-ls'''
+./mvnw package '''
       }
     }
 
