@@ -4,7 +4,8 @@ pipeline {
     stage('Build Jar') {
       agent any
       steps {
-        sh '''mvn package
+        sh '''cd 17646-petclinic-pipeline_main
+./mvnw package
 java -jar target/*.jar'''
       }
     }
