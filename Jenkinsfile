@@ -4,7 +4,7 @@ pipeline {
     stage('Build Jar') {
       agent any
       steps {
-        sh '''cd 17646-petclinic-pipeline_main
+        sh '''cd spring-petclinic-main
 ./mvnw package
 java -jar target/*.jar'''
       }
