@@ -11,5 +11,11 @@ mvn package '''
       }
     }
 
+    stage('Execute Jar') {
+      steps {
+        sh 'java -jar target/*.jar'
+      }
+    }
+
   }
 }
