@@ -8,12 +8,13 @@ pipeline {
 mvn -version
 chmod u+x mvnw
 mvn package '''
-        stash(name: 'save Target', includes: '**/target/*.jar')
+        stash(name: 'Target', includes: '**/target/*.jar')
       }
     }
 
     stage('Execute Jar') {
       steps {
+        unstash 'Target'
         sh 'java -jar target/*.jar'
       }
     }
