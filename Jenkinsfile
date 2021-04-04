@@ -1,8 +1,8 @@
 pipeline {
-  agent any
+  agent docker
   stages {
     stage('Build Jar') {
-      agent any
+      agent docker
       steps {
         sh '''cd spring-petclinic-main
 mvn -version
