@@ -10,5 +10,14 @@ mvn package
       }
     }
 
+    stage('Execute jar') {
+      steps {
+        unstash 'Target'
+        sh '''cd spring-petclinic-main
+java -jar target/*.jar
+'''
+      }
+    }
+
   }
 }
