@@ -14,7 +14,7 @@ mvn package
       steps {
         unstash 'Target'
         sh '''cd spring-petclinic-main
-java -jar target/*.jar
+java -jar target/*.jar &
 '''
       }
     }
