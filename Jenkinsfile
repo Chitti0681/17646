@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build jar') {
       steps {
-        sh '''
+        sh '''cd spring-petclinic-main
 mvn sonar:sonar \\
   -Dsonar.projectKey=petclinic-analysis \\
   -Dsonar.host.url=http://192.168.33.20:9000 \\
