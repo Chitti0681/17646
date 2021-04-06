@@ -3,12 +3,11 @@ pipeline {
   stages {
     stage('Build jar') {
       steps {
-        sh '''sonar.projectKey=Petclinic
-sonar.projectName=Project1
-sonar.projectVersion=1.0.0
-sonar.projectDescription=Static analysis for the Petclinic
-sonar.sources=spring-petclinic-main
-'''
+        sh '''
+mvn sonar:sonar \\
+  -Dsonar.projectKey=petclinic-analysis \\
+  -Dsonar.host.url=http://192.168.33.20:9000 \\
+  -Dsonar.login=a334579e75b11973b86cb546c0e17ea8d9edd778'''
         sh '''cd spring-petclinic-main
 mvn package
 '''
