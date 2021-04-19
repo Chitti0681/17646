@@ -1,0 +1,5 @@
+- hosts: ubuntu
+
+  tasks:
+    - name: copy-file
+      copy: src=./hello dest=/home/vagrant/
