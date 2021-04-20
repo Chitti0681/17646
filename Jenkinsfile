@@ -23,6 +23,5 @@ java -jar target/*.jar
 '''
       }
     }
-
   }
 }
